@@ -1,9 +1,12 @@
-FROM alpine:latest
-MAINTAINER Frank Zhao <frank@frankzhao.net>
+FROM google/cloud-sdk:alpine
 
-# Install tools
+RUN apk update && apk upgrade && pip install -U pip
 RUN apk --update add \
     iputils iproute2 net-tools tcpdump \
-    ethtool iperf findutils bash
+    ethtool iperf findutils bash \
+    aws-cli \
+    && rm -rf /var/cache/apk/*
+    
+RUN gcloud components install kubectl
 
 CMD ["bash"]
