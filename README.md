@@ -2,7 +2,10 @@ docktools
 ===
 
 Docker alpine image with a bash shell and tools for GCloud, AWS and network testing
-
+Features:
+- Mounts you SSH keys too allow git
+- Mounts config for gcloud
+- Mounts config for boto
 
 ```
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
