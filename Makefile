@@ -6,7 +6,7 @@ TAG 	:= benneic/$(NAME):$(VERSION)
 .PHONY: default build
 
 default: build
-	@docker run --privileged -rm -it -v ~/.ssh:/root/.ssh:ro --name $(NAME) $(TAG) bash
+	@docker run --privileged --rm -it -v ~/.ssh:/root/.ssh:ro --name $(NAME) $(TAG) bash
 
 build:
 	@docker build -t $(TAG) $(ROOT)
