@@ -1,11 +1,16 @@
 docktools
 ===
 
-Docker alpine image with a bash shell and tools for network testing, apache bench and git
+Docker alpine image with:
+- bash shell
+- tools for network testing
+- apache bench for load testing
+- h2load for http2 load testing
+- git
 
 ```
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-benneic/docktools   latest              763ce112f63f        4 seconds ago       38.8MB
+benneic/docktools   latest              763ce112f63f        4 seconds ago       51.6MB
 ```
 
 Install
