@@ -1,19 +1,20 @@
 ROOT	:= $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
-NAME	:= nettools
+NAME	:= docktools
 VERSION := 1.0
-TAG 	:= chickenmaru/$(NAME):$(VERSION)
+TAG 	:= benneic/$(NAME):$(VERSION)
 
-.PHONY: all build
+.PHONY: default build
 
-all: build
+default: build
+	@docker run --privileged -rm -it -v ~/.ssh:/root/.ssh:ro --name $(NAME) $(TAG) bash
 
 build:
 	@docker build -t $(TAG) $(ROOT)
-
+	
 run:
-	@docker run --privileged -it -d --name $(NAME) $(TAG)
+	@docker run --privileged -it -d -v ~/.ssh:/root/.ssh:ro --name $(NAME) $(TAG)
 
-shell:
+bash:
 	@docker exec -it $(NAME) bash
 
 clean:
