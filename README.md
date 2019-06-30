@@ -3,7 +3,7 @@ docktools
 
 Docker alpine image with:
 - bash shell
-- tools for network testing
+- tools for network testing (ethtool, nmap, netcat, tcpdump etc)
 - apache bench for load testing
 - h2load for http2 load testing
 - git
