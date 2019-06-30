@@ -43,7 +43,9 @@ git clone https://github.com/benneic/docktools.git
 cd docktools
 make
 ```
-When using the default command the container will quit and remove the container when you exit the shell. Your .ssh keys are also mounted inside the container for your convenience.
+When using the default command the container will quit and remove the container when you exit the shell.
+
+The Makeile commands will mount your .ssh keys inside the container for your convenience. Bare in mind that it's not exactly great security practice to mount your private keys into a random docker image you found on the internet.
 
 The command `make run` can be used to keep the container deamonised in the background.
 
